@@ -5,4 +5,8 @@ you collect the mkv videos by runnig the basler/braid script outlined the how to
 in the directory that you collected hotwire data as .bag files place **bag2hdf5.py** and **convert_all.py** <br> 
 run: ```python convert_all.py```
 
-Next you should follow the instruction for [deeplabcut](https://github.com/vanbreugel-lab/How_To_Guides/tree/main/deeplabcut_instructions) and stop at the step **Create a training dataset and train the network using a GPU (much faster)**
+Next you should follow the instruction for [deeplabcut](https://github.com/vanbreugel-lab/How_To_Guides/tree/main/deeplabcut_instructions) and stop after the step **Create a training dataset and train the network using a GPU (much faster)**
+
+Then you should follow the steps found for [Anipose](https://github.com/vanbreugel-lab/How_To_Guides/tree/main/Running_Anipose_with_Deep_Lab_Cut)
+
+Toss your wind sensor data into the script ** New_calibration.ipynb ** to get your wind sensor data in terms of x and y velocity values
