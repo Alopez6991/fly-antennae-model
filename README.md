@@ -9,4 +9,4 @@ Next you should follow the instruction for [deeplabcut](https://github.com/vanbr
 
 Then you should follow the steps found for [Anipose](https://github.com/vanbreugel-lab/How_To_Guides/tree/main/Running_Anipose_with_Deep_Lab_Cut)
 
-Toss your wind sensor data into the script ** New_calibration.ipynb ** to get your wind sensor data in terms of x and y velocity values
+Toss your wind sensor data into the script **New_calibration.ipynb** to get your wind sensor data in terms of x and y velocity values
