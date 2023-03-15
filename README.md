@@ -2,6 +2,9 @@
 collect wind speed data with 2d hotwire. This is published on topic **analog_output** Collect mkv video at 200 fps with 2000 exposure.
 you collect the mkv videos by runnig the basler/braid script outlined the how to found [here](https://github.com/vanbreugel-lab/How_To_Guides/tree/main/recording_videos_with_braid). 
 # Post Preccesing
+
+[a link] (https://github.com/Alopez6991/fly-antennae-model/edit/main/README.md)
+
 in the directory that you collected hotwire data as .bag files place **bag2hdf5.py** and **convert_all.py** <br> 
 run: ```python convert_all.py```
 
