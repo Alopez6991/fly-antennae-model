@@ -1,7 +1,8 @@
+<!--
 # Experimnetal setup
 collect wind speed data with 2d hotwire. This is published on topic **analog_output** Collect mkv video at 200 fps with 2000 exposure.
 you collect the mkv videos by runnig the basler/braid script outlined the how to found [here](https://github.com/vanbreugel-lab/How_To_Guides/tree/main/recording_videos_with_braid). 
-
+-->
 # Experimental setup with the 3d Trisonica
 ## physical system
 - Physical setup camera system
@@ -24,25 +25,32 @@ you collect the mkv videos by runnig the basler/braid script outlined the how to
 - Computer
   1. if using the laptop it need to be pluged in to its piwer supply at all times to maintain charge.     
 ## Softwear/Code/Terminal/ect
-1. use ``` mkdir ``` to make a new directory for collecting data. e.g. ``` mkdir 03_15_23_fly ```
-2. change directories to new folder e.g. ``` cd 03_15_23_fly ```
-3. flash the arduino with ```fans_no_ros_control.ino ```. This code currently works for Lamninar and Stati. you need to comment out lines 29-32 
-```cpp
-  if (Serial.available()){
-    Mode = Serial.read();
-    new_info =0;
-    }
-```
-and uncomment line 33
+- Terminal set up
+  1. use ``` mkdir ``` to make a new directory for collecting data. e.g. ``` mkdir 03_15_23_fly ```
+  2. change directories to new folder e.g. ``` cd 03_15_23_fly ```
+  3. run the comand ``` roscore ```
+- Arduino set up 
+  1. flash the arduino with ```fans_no_ros_control.ino ```. This code currently works for Lamninar and Static. you need to comment out lines 29-32 
+    ```cpp
+      if (Serial.available()){
+        Mode = Serial.read();
+        new_info =0;
+        }
+    ```
+    and uncomment line 33
 
-```cpp
-Mode='T';
-```
+    ```cpp
+    Mode='T';
+    ```
 
-to swap to Turb. 
+    to swap to Turb. 
+- Triasonica set up
+  1. run the comand ``` rosrun trisonica trisonica_usb.py ``` note the port your trisonica is pluged into and change that in the script. typically ```dev/ttyUSB0``` or ```dev/ttyUSB1```
+ - Camera set up
+  1. run ``` braid-pylon run /path/to/config.toml ``` e.g. ``` braid-pylon run Desktop/config.toml ```
 
 
-
+<!--
 # Post Preccesing
 run the data you have colleced on the trisonica node with [MATLAB script](https://github.com/Alopez6991/fly-antennae-model/tree/main/converstion-scripts/MATLAB-bag2h5) to convert from a .bag file to a .hdf5
 
@@ -55,3 +63,4 @@ Next you should follow the instruction for [deeplabcut](https://github.com/vanbr
 Then you should follow the steps found for [Anipose](https://github.com/vanbreugel-lab/How_To_Guides/tree/main/Running_Anipose_with_Deep_Lab_Cut)
 
 Toss your wind sensor data into the script **New_calibration.ipynb** to get your wind sensor data in terms of x and y velocity values
+-->
