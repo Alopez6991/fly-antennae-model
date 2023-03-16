@@ -24,7 +24,7 @@ you collect the mkv videos by runnig the basler/braid script outlined the how to
   4. the power supply also needs to be plugged in to any outlet or power strip.
 - Computer
   1. if using the laptop it need to be pluged in to its piwer supply at all times to maintain charge.     
-## Softwear/Code/Terminal/ect
+## Softwear/Code/Terminal/ect set up
 - Terminal set up
   1. use ``` mkdir ``` to make a new directory for collecting data. e.g. ``` mkdir 03_15_23_fly ```
   2. change directories to new folder e.g. ``` cd 03_15_23_fly ```
@@ -48,7 +48,29 @@ you collect the mkv videos by runnig the basler/braid script outlined the how to
   1. run the comand ``` rosrun trisonica trisonica_usb.py ``` note the port your trisonica is pluged into and change that in the script. typically ```dev/ttyUSB0``` or ```dev/ttyUSB1```
  - Camera set up
   1. run ``` braid-pylon run /path/to/config.toml ``` e.g. ``` braid-pylon run Desktop/config.toml ```
+  2. note that the location you run braid in is the location videos save to
+  3. open up the first link that apears in the terminal
+  4. click on the camera you are using
+  5. scroll midway down on the active page and dissable all asspects relating to tracking
+  6. scroll all the way down to the bottom and set exposure to 2000 and frame rate to 200
+  7. check limit frame rate
+  8. at the top select the following setting:
+      * MKV Max Framerate: unlimited
+      * MKV Codec: ``` FILL THIS IN LATER ```
+      * MKV Bitrate: 10000
 
+## Collecting data
+- Video
+  1. in the baslir tab press the big red record button
+- Wind data
+  1. in the terminal run ``` rosbag record /trisonica -O "file_name" --duration=5m```.
+      * note that the file name should change each data collection e.g. ```rosbag record /trisonica -O "F1L0_01" --duration=5m```
+- order of operation
+  1. Run basilar
+  2. run rosbag
+  3. wait for rosbag to finish
+  4. then hit stop in basilar
+  5. to make things esier you can imidiately change the file name for the vide you just recorded to match the name of the bag file using ``` mv ``` e.g. ``` mv movie_1234.mkv F1L0_01.mkv``` 
 
 <!--
 # Post Preccesing
