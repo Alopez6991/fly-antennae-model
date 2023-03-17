@@ -56,7 +56,7 @@ you collect the mkv videos by runnig the basler/braid script outlined the how to
   7. check limit frame rate
   8. at the top select the following setting:
       * MKV Max Framerate: unlimited
-      * MKV Codec: ``` FILL THIS IN LATER ```
+      * MKV Codec: h264
       * MKV Bitrate: 10000
 
 ## Collecting data
@@ -70,7 +70,7 @@ you collect the mkv videos by runnig the basler/braid script outlined the how to
   2. run rosbag
   3. wait for rosbag to finish
   4. then hit stop in basilar
-  5. to make things esier you can imidiately change the file name for the vide you just recorded to match the name of the bag file using ``` mv ``` e.g. ``` mv movie_1234.mkv F1L0_01.mkv``` 
+  5. to make things esier you can imidiately change the file name for the video you just recorded to match the name of the bag file using ``` mv ``` e.g. ``` mv movie_1234.mkv F1L0_01.mkv``` 
 
 <!--
 # Post Preccesing
