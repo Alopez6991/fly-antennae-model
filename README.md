@@ -86,3 +86,36 @@ Then you should follow the steps found for [Anipose](https://github.com/vanbreug
 
 Toss your wind sensor data into the script **New_calibration.ipynb** to get your wind sensor data in terms of x and y velocity values
 -->
+
+
+``` ├── bad_fly
+│   ├── data
+│   │   └── bad
+│   └── videos
+│       └── bad
+├── fly_1
+│   ├── code
+│   ├── data
+│   ├── DLC
+│   └── videos
+│       ├── DLC
+│       ├── F100L_01
+│       ├── F100L_01_R
+│       ├── F190L_01
+│       ├── F190L_01_R
+│       ├── F1T_01
+│       └── F1T_01_R
+└── fly_2
+    ├── code
+    ├── data
+    │   └── good
+    ├── DLC
+    └── videos
+        ├── DLC
+        ├── F200L_01
+        ├── F200L_01_R
+        ├── F290L_02
+        ├── F290L_02_R
+        ├── F2T_01
+        └── F2T_01_R
+```
