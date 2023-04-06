@@ -87,6 +87,30 @@ Then you should follow the steps found for [Anipose](https://github.com/vanbreug
 Toss your wind sensor data into the script **New_calibration.ipynb** to get your wind sensor data in terms of x and y velocity values
 -->
 
+# Structuring your Trainig Enviroment
+
+We are working with a lot of data and a lot of files. To allow for the code to be as robust as possible it will be helpful to structure your data in as convinet and organized way as possible. here is how I have structured the data for one month's worth of experiments. 
+
+```
+── march_2023_fly
+│   ├── 03_15_23_fly
+│   │   ├── code
+│   │   ├── data
+│   │   ├── DLC
+│   │   └── videos
+│   ├── 03_17_23_fly
+│   │   ├── code
+│   │   ├── data
+│   │   ├── DLC
+│   │   └── videos
+│   ├── 03_20_23_fly
+│   │   ├── code
+│   │   ├── data
+│   │   ├── DLC
+│   │   └── videos
+
+```
+for each fly it is usefule to have a directory for code, data, videos, and DLC
 
 ```
 ├── bad_fly
