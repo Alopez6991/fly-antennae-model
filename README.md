@@ -144,3 +144,41 @@ for each fly it is usefule to have a directory for code, data, videos, and DLC
         ├── F2T_01
         └── F2T_01_R
 ```
+# This section will be for a more detailed break downs of Deep Lab Cut 
+
+# Analysing the data
+
+## File Structure
+
+structureing you files properly will help smooth out the the procces of working with so many files.
+
+## The Code
+Place the code `<fly_n>_Clean_Data_Extraction.ipynb` e.g. `fly_1_Clean_Data_Extraction.ipynb`  in the respective fly's code directory. Read through the comments and headers given in the jupyternotebooks. they will give context on how to modify the code to work for you fly. Mostly it's just updating file paths. 
+
+here is a list of all the packages you'll need 
+
+``` python
+from __future__ import division
+import numpy as np
+import pandas
+import matplotlib.pyplot as plt
+import matplotlib
+import matplotlib.pylab as pl
+import seaborn as sns
+import scipy.fftpack
+from scipy import signal
+from scipy.optimize import minimize_scalar
+from scipy import interpolate
+from scipy.interpolate import interp1d
+import h5py
+import figurefirst as fifi
+import math
+import os
+from IPython.display import HTML
+from datetime import datetime
+from pygame.math import Vector2
+```
+
+You also need to run all of your wind data through a matlab script. I'm soo sorry for that you can blame Ben.
+
+
